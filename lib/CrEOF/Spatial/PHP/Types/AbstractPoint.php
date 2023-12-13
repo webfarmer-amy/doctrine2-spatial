@@ -27,6 +27,7 @@ use CrEOF\Geo\String\Exception\RangeException;
 use CrEOF\Geo\String\Exception\UnexpectedValueException;
 use CrEOF\Geo\String\Parser;
 use CrEOF\Spatial\Exception\InvalidValueException;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Abstract point object for POINT spatial types
@@ -42,11 +43,13 @@ abstract class AbstractPoint extends AbstractGeometry
     /**
      * @var float $x
      */
+    #[Groups(["getSightAreas", "getRecords", "create", "update"])]
     protected $x;
 
     /**
      * @var float $y
      */
+    #[Groups(["getSightAreas", "getRecords", "create", "update"])]
     protected $y;
 
     public function __construct($x, $y, $srid = null)
