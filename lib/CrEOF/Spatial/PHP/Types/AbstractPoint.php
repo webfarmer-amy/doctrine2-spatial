@@ -49,7 +49,7 @@ abstract class AbstractPoint extends AbstractGeometry
      */
     protected $y;
 
-    public function __construct()
+    public function __construct($x, $y, $srid = null)
     {
         $argv = $this->validateArguments(func_get_args());
 
