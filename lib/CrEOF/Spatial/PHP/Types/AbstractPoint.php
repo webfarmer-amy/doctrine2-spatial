@@ -43,13 +43,13 @@ abstract class AbstractPoint extends AbstractGeometry
     /**
      * @var float $x
      */
-    #[Groups(["getSightAreas", "getRecords", "create", "update"])]
+    #[Groups(["getSightAreas", "getSightRecords", "create", "update"])]
     protected $x;
 
     /**
      * @var float $y
      */
-    #[Groups(["getSightAreas", "getRecords", "create", "update"])]
+    #[Groups(["getSightAreas", "getSightRecords", "create", "update"])]
     protected $y;
 
     public function __construct($x, $y, $srid = null)
